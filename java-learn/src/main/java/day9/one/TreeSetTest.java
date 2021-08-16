@@ -21,6 +21,10 @@ public class TreeSetTest {
 			//String next = (String) iterator.next();
 			System.out.println(iterator.next());
 		}
+		for (Iterator iterator = set.iterator(); iterator.hasNext(); ) {
+			//String next = (String) iterator.next();
+			System.out.println(iterator.next());
+		}
 	}
 
 }
