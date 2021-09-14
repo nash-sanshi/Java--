@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="java-practise:war">
+    <output-path>$PROJECT_DIR$/../java-practise/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>java-practise</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="java-practise-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="java-practise:war exploded" />
+    </root>
+  </artifact>
+</component>

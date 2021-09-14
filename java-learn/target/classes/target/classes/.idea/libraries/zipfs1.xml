@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="zipfs1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../jdk-1.8/demo/nio/zipfs/src.zip!/" />
+      <root url="jar://$PROJECT_DIR$/../../jdk-1.8/demo/nio/zipfs/zipfs.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
