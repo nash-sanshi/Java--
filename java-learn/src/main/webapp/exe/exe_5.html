@@ -1,0 +1,69 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="../js/jquery-1.8.0.js"></script>
+  </head>
+  <body>
+  	<table id="tableID" border="1" align="center" width="60%">
+  		<thead>
+	  		<tr>	
+	  			<th>用户名</th>
+	  			<th>密码</th>
+	  			<th>操作</th>
+	  		</tr>
+  		</thead>
+  		<tbody id="tbodyID">
+  			<!-- 动态增加行 -->
+  		</tbody>
+  	</table>
+  	<hr/>
+  	用户名：<input type="text" id="usernameID"/>
+  	密码：  <input type="text" id="passwordID"/>
+  			<input type="button" value="增加" id="addID"/>
+  </body>
+  <script type="text/javascript">
+
+	  //定位“增加”按钮，同时添加单击事件
+	  $("#addID").click(function () {
+		  //读取用户名和密码的值
+		  var username = $("#usernameID").val();
+		  var password = $("#passwordID").val();
+		  //去空格
+		  username = $.trim(username);
+		  password = $.trim(password);
+		  //判断
+		  if (username.length > 0 && password.length > 0) {
+			  //创建tr对象
+			  var $tr = $("<tr></tr>");
+			  //创建td对象
+			  var $td1 = $("<td>" + username + "</td>");
+			  var $td2 = $("<td>" + password + "</td>");
+			  var $td3 = $("<td></td>");
+			  //创建input按钮
+			  var $delbutton = $("<input type='button' value='删除'/>");
+			  //为input按钮添加单击事件
+			  $delbutton.click(function () {
+			  	  //删除tr对象
+				  $tr.remove();
+			  });
+			  //将input按钮添加到td3对象中，形成父子关系
+			  $td3.append($delbutton);
+			  //td对象添加到tr对象里面，形成父子关系
+			  $tr.append($td1);
+			  $tr.append($td2);
+			  $tr.append($td3);
+			  //tr对象添加到tableId对象里面，形成父子关系
+			  $("#tbodyID").append($tr);
+			  //清空用户名和密码文本框中的内容
+			  $("#usernameID").val("");
+			  $("#passwordID").val("");
+		  } else {
+		  	alert("用户名和密码长度必须大于0")
+		  }
+	  });
+  </script>
+</html>
+
+
+

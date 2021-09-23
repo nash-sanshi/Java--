@@ -1,0 +1,31 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>method_1.html</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+   <script type="text/javascript" src="../js/jquery-1.8.0.js"></script>
+  </head>
+  <body>
+	<input type="button" value="原按钮"/>  	
+	<script type="text/javascript">
+		//复制原input元素，添加到原input元素后，与其同级
+        var $oldbutton = $(":button");
+        //为原按钮添加事件
+        $oldbutton.click(function () {
+            alert("原按钮");
+        });
+        //复制“原按钮”为“新按钮”，true复制原按钮事件处理函数
+        var $newbutton = $oldbutton.clone(true);
+        //将“新按钮”添加到“原按钮”后面，形成兄弟关系
+        $oldbutton.after($newbutton);
+        //修改“新按钮”属性
+        $newbutton.attr("value", "新按钮");
+
+		//为原input元素动态添加单击事件，且复制原input元素，添加到原input元素后，与其同级，且和原按钮有一样的行为
+	</script>
+  </body>
+</html>
+
+
+
+
